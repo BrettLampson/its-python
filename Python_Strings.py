@@ -49,18 +49,18 @@ import sys
 # s.capitalize()
 # Return a copy of the string with its first character capitalized and the rest lowercase.
 
-# s = 'brett lampson'
+# s = 'Brad lampson'
 # print(s.capitalize())
-# Brett lampson
+# Brad lampson
 
 
 # ------------------------------------------------------------------------------------------------ #
 # s.casefold()
 # Casefold is similar to lowercase but more aggressive
 
-# s = 'BRETT lampson'
+# s = 'Brad lampson'
 # print(s.casefold())
-# brett lampson
+# Brad lampson
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -68,9 +68,9 @@ import sys
 # Return centered in a string of length width.
 # Padding is done using the fillchar (default is an ASCII space)
 
-# s = 'brett lampson'
+# s = 'Brad lampson'
 # print(s.center(21, '-'))
-#  ----brett lampson----
+#  ----Brad lampson----
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -185,14 +185,14 @@ import sys
 # print(a, b, c, d, e, f, g, sep='\n')
 
 # # F-STRINGS, aka "string interpolation"
-# name = 'Brett'
+# name = 'Brad'
 # age = '39'
 # print(f'My name is {name} and I am {age} years old')
 # print('My name is {name} and I am {age} years old')
-# print('My name is {name} and I am {age} years old'.format(name='Brett', age='40'))
+# print('My name is {name} and I am {age} years old'.format(name='Brad', age='40'))
 
 # # Using **locals() to feed .format()
-# one = 'Brett'
+# one = 'Brad'
 # two = 'Python'
 # print('{one} likes programming in {two}'.format(**locals()))
 
@@ -306,9 +306,9 @@ import sys
 # ------------------------------------------------------------------------------------------------ #
 # s.isupper()
 
-# s = 'BRETT LAMPSON'
+# s = 'Brad LAMPSON'
 # print(s.isupper())  # True
-# s1 = 'BRETT lampson'
+# s1 = 'Brad lampson'
 # print(s1.isupper())  # False
 
 
@@ -347,7 +347,7 @@ import sys
 # vow = 'aeiou'
 # num = '12345'
 # transtbl = str.maketrans(vow, num)   # or you could plug strings in as args
-# s = 'Brett Lampson'
+# s = 'Brad Lampson'
 # print(s.translate(transtbl))         # br2tt l1mps4n
 
 
@@ -462,10 +462,10 @@ import sys
 # s.splitlines([keepends])
 # Return a list of the lines in the string, breaking at line boundaries
 
-# s = 'Brett Lampson'
-# s = 'Brett\nLamp\nson'
-# print(s.splitlines())               # ['Brett', 'Lamp', 'son']
-# print(s.splitlines(keepends=True))  # ['Brett\n', 'Lamp\n', 'son']
+# s = 'Brad Lampson'
+# s = 'Brad\nLamp\nson'
+# print(s.splitlines())               # ['Brad', 'Lamp', 'son']
+# print(s.splitlines(keepends=True))  # ['Brad\n', 'Lamp\n', 'son']
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -500,8 +500,8 @@ import sys
 # ------------------------------------------------------------------------------------------------ #
 # s.title()
 
-# s = 'brett lampson'
-# print(s.title())  # Brett Lampson
+# s = 'Brad lampson'
+# print(s.title())  # Brad Lampson
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -510,15 +510,15 @@ import sys
 # alpha = 'aeiou'
 # numer = '12345'
 # transtbl = str.maketrans(alpha, numer)  # or you could plug strings in as args
-# s = 'brett lampson'
+# s = 'Brad lampson'
 # print(s.translate(transtbl))  # br2tt l1mps4n
 
 
 # ------------------------------------------------------------------------------------------------ #
 # s.upper()
 
-# s = 'brett lampson'
-# print(s.upper())  # BRETT LAMPSON
+# s = 'Brad lampson'
+# print(s.upper())  # Brad LAMPSON
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -538,9 +538,9 @@ import sys
 # ------------------------------------------------------------------------------------------------ #
 # CREATE A STRING
 
-# s = 'Brett Lampson'
+# s = 'Brad Lampson'
 # s = str(2 + 3)
-# s = ' '.join(['Brett', 'Lampson'])
+# s = ' '.join(['Brad', 'Lampson'])
 # print(s)
 
 
