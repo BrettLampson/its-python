@@ -38,7 +38,7 @@ from pprint import pprint
 
 # ------------------------------------------------------------------------------------------------ #
 # REMOVE ALL ELEMENTS
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
 # D.clear()
 # print(D)  # {}
 
@@ -47,9 +47,9 @@ from pprint import pprint
 # COPY A DICTIONARY
 # D.copy()
 # Returns a shallow copy
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
 # E = D.copy()
-# print(E)  # {'Shaina': 32, 'Brett': 38, 'Kayden': 3}
+# print(E)  # {'Shane': 32, 'Brad': 38, 'Kevin': 3}
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -67,7 +67,7 @@ from pprint import pprint
 # RETURN THE VALUE OF A KEY
 # D.get(key, default)
 # To get value, OR argument if value doesn't exist
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
 # print(D.get('Bob', '\nKey = not found'))
 
 
@@ -75,16 +75,16 @@ from pprint import pprint
 # RETURN KEYS & VALUES
 # D.items()
 # Returns a "view object" of keys/values in D.  Meaning when the dict changes, the view reflects these changes
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# print(D.items())  # dict_items([('Brett', 38), ('Shaina', 32), ('Kayden', 3)])
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# print(D.items())  # dict_items([('Brad', 38), ('Shane', 32), ('Kevin', 3)])
 
 
 # ------------------------------------------------------------------------------------------------ #
 # RETURN ONLY KEYS
 # D.keys()
 # Returns a "view object" of the keys.  Meaning when the dict changes, the view reflects these changes
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# print(D.keys())  # dict_keys(['Shaina', 'Brett', 'Kayden'])
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# print(D.keys())  # dict_keys(['Shane', 'Brad', 'Kevin'])
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -92,9 +92,9 @@ from pprint import pprint
 # D.pop(key, default)
 # If key is in the dictionary, remove it and return its value
 # If key is not in the dictionary, a KeyError is raised.
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# print(D.pop('Shaina'))  # 32
-# print(D)  # {'Kayden': 3, 'Brett': 38} ---> Shaina: 32 has been removed
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# print(D.pop('Shane'))  # 32
+# print(D)  # {'Kevin': 3, 'Brad': 38} ---> Shane: 32 has been removed
 # def pop_D():
 #     try:
 #         print(D.pop('Bob'))
@@ -108,18 +108,18 @@ from pprint import pprint
 # D.popitem()
 # Remove and return an arbitrary (key, value) pair from the dictionary
 # Useful to destructively iterate over a dictionary, as often used in set algorithms
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# print(D.popitem())   # ('Kayden', 3)
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# print(D.popitem())   # ('Kevin', 3)
 
 
 # ------------------------------------------------------------------------------------------------ #
 # RETURN VALUE if key in dictionary, if NOT in dictionary insert key/value pair and return its value
 # D.setdefault(key, default)
 # If key is in the dictionary, return its value. If not, insert key with a value of default and return default
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# D.setdefault('Marisa', 40)
-# print(D)                      # Since 'Marisa' not in D, it's key/value is added and 40 is returned
-# D.setdefault('Brett', 40)     # Since 'Brett' is in D, its value 38 is returned
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# D.setdefault('Marsha', 40)
+# print(D)                      # Since 'Marsha' not in D, it's key/value is added and 40 is returned
+# D.setdefault('Brad', 40)     # Since 'Brad' is in D, its value 38 is returned
 # print(D)
 
 
@@ -127,26 +127,26 @@ from pprint import pprint
 # UPDATE/OVERWRITE DICTIONARY KEYS/VALUES
 # D.update(other)
 # Update the dictionary with the key/value pairs from other, overwriting existing keys
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# D1 = {'Marisa': 40, 'Ryan': 39, 'Brett': 39}
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# D1 = {'Marsha': 40, 'Ryan': 39, 'Brad': 39}
 # D.update(D1)
-# print(D)  # {'Brett': 39, 'Marisa': 40, 'Ryan': 39, 'Kayden': 3, 'Shaina': 32}
+# print(D)  # {'Brad': 39, 'Marsha': 40, 'Ryan': 39, 'Kevin': 3, 'Shane': 32}
 
 
 # ------------------------------------------------------------------------------------------------ #
 # UPDATE/OVERWRITE DICTIONARY KEYS/VALUES
 # Can be used to combine 2 dictionaries
 # D.update(kwarg)
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# D.update(Marisa=40, Ryan=39, Brett=39)
-# print(D)  # {'Shaina': 32, 'Ryan': 39, 'Marisa': 40, 'Brett': 38, 'Kayden': 3}
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# D.update(Marsha=40, Ryan=39, Brad=39)
+# print(D)  # {'Shane': 32, 'Ryan': 39, 'Marsha': 40, 'Brad': 38, 'Kevin': 3}
 
 
 # ------------------------------------------------------------------------------------------------ #
 # RETURNS ALL VALUES from dictionary
 # D.values()
 # Returns a "view object" of the dictionary values
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
 # print(D.values())  # dict_values([32, 3, 38])
 
 
@@ -160,10 +160,10 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # CREATE A DICTIONARY
 
-# a = {'Name': 'Brett', 'Age': 38}                      # Manually
-# b = dict(Name='Brett', Age=38)                        # Constructor
-# c = dict(zip(('Name', 'Age'), ('Brett', 38)))         # From a zipped tuple
-# d = dict(zip(['Name', 'Age'], ['Brett', 38]))         # From a zipped list
+# a = {'Name': 'Brad', 'Age': 38}                      # Manually
+# b = dict(Name='Brad', Age=38)                        # Constructor
+# c = dict(zip(('Name', 'Age'), ('Brad', 38)))         # From a zipped tuple
+# d = dict(zip(['Name', 'Age'], ['Brad', 38]))         # From a zipped list
 # print(a == b == c == d)                          # True
 
 
@@ -171,47 +171,47 @@ from pprint import pprint
 # CREATE A DICTIONARY from a tuple using ZIP()
 
 # tup1 = ('Name', 'Age', 'Sex')
-# tup2 = ('Brett', 38, 'Male')
+# tup2 = ('Brad', 38, 'Male')
 # dict1 = dict(zip(tup1, tup2))
 # print(dict1)
-# # {'Name': 'Brett', 'Age': 38}
+# # {'Name': 'Brad', 'Age': 38}
 #
-# tuple1 = ('Name', 'Age'), ('Brett', 38)
+# tuple1 = ('Name', 'Age'), ('Brad', 38)
 # dict2 = dict(zip(tuple1[0], tuple1[1]))
 # print(dict2)
-# # {'Name': 'Brett', 'Age': 38}
+# # {'Name': 'Brad', 'Age': 38}
 
 
 # ------------------------------------------------------------------------------------------------ #
 # ADD a new KEY: VALUE
 
-# D = dict(Brett=38, Shaina=32, Kayden=3)
-# D['Oliver']=0
+# D = dict(Brad=38, Shane=32, Kevin=3)
+# D['Ollie']=0
 # print(D)
-# # {'Brett': 38, 'Shaina': 32, 'Kayden': 3, 'Oliver': 0}
+# # {'Brad': 38, 'Shane': 32, 'Kevin': 3, 'Ollie': 0}
 
 
 # ------------------------------------------------------------------------------------------------ #
 # MODIFY existing VALUE
 
-# D = dict(Brett=38, Shaina=332, Kayden=33)
-# D['Shaina']=34
-# D['Kayden']=3
+# D = dict(Brad=38, Shane=332, Kevin=33)
+# D['Shane']=34
+# D['Kevin']=3
 # print(D)
-# # {'Kayden': 3, 'Shaina': 34, 'Brett': 38}
+# # {'Kevin': 3, 'Shane': 34, 'Brad': 38}
 #
 # # If Key doesn't exist, it's added
-# D['Oliver']=1
+# D['Ollie']=1
 # print(D)
-# # {'Brett': 38, 'Shaina': 34, 'Kayden': 3, 'Oliver': 1}
+# # {'Brad': 38, 'Shane': 34, 'Kevin': 3, 'Ollie': 1}
 
 
 # ------------------------------------------------------------------------------------------------ #
 # DELETE A KEY: VALUE pair, keep the rest
 
-# myDict = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# del myDict['Brett']
-# # {'Kayden': 3, 'Shaina': 32}
+# myDict = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# del myDict['Brad']
+# # {'Kevin': 3, 'Shane': 32}
 
 # ------------------------------------------------------------------------------------------------ #
 # DELETE ALL KEYS
@@ -223,15 +223,15 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # GET A VALUE
 
-# D = {'Brett': 38, 'Shaina': 3434, 'Kayden': 33}
-# D['Brett']
+# D = {'Brad': 38, 'Shane': 3434, 'Kevin': 33}
+# D['Brad']
 # 38
 
 
 # ------------------------------------------------------------------------------------------------ #
 # ITERATING to GET ALL VALUES
 
-# D = {'Brett': 38, 'Shaina': 3434, 'Kayden': 33}
+# D = {'Brad': 38, 'Shane': 3434, 'Kevin': 33}
 # D1 = {D[item] for item in D}
 # D2 = {item for item in D.values()}
 
@@ -239,9 +239,9 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # MEMBERSHIP TESTING
 
-# D = {'Shaina': 34, 'Kayden': 3, 'Brett': 38}
+# D = {'Shane': 34, 'Kevin': 3, 'Brad': 38}
 # 'Birds' in D     # False
-# 'Brett' in D     # True
+# 'Brad' in D     # True
 # 34 in D.values() # True
 
 
@@ -281,23 +281,23 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # FIND COMMONALITIES BETWEEN 2 DICTIONARIES
 
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# E = {'Oliver': 1, 'Shaina': 32, 'Unknown': 0}
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# E = {'Ollie': 1, 'Shane': 32, 'Unknown': 0}
 #
 # # & Common Keys
-# print(D.keys() & E.keys())    # {'Shaina'}
+# print(D.keys() & E.keys())    # {'Shane'}
 #
 # # - Keys in D, but not in E
-# print(D.keys() - E.keys())    # {'Kayden', 'Brett'}
+# print(D.keys() - E.keys())    # {'Kevin', 'Brad'}
 #
 # # ^ Unique Keys
-# print(D.keys() ^ E.keys())    # {'Kayden', 'Brett', 'Oliver', 'Unknown'}
+# print(D.keys() ^ E.keys())    # {'Kevin', 'Brad', 'Ollie', 'Unknown'}
 #
 # # | All Keys
-# print(D.keys() | E.keys())    # {'Oliver', 'Brett', 'Kayden', 'Shaina', 'Unknown'}
+# print(D.keys() | E.keys())    # {'Ollie', 'Brad', 'Kevin', 'Shane', 'Unknown'}
 #
 # # & Common Items and so forth...
-# print(D.items() & E.items())  # {('Shaina', 32)}
+# print(D.items() & E.items())  # {('Shane', 32)}
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -317,9 +317,9 @@ from pprint import pprint
 # CREATE A NEW DICTIONARY WITH CERTAIN KEYS REMOVED
 
 # DICTIONARY COMPREHENSION
-# D = {'Brett': 38, 'Shaina': 32, 'Kayden': 3}
-# E = {key:D[key] for key in D.keys() - {'z', 'Brett', 'Shaina'}}
-# print(E)  # {'Kayden': 3}  notice 'z' was in there, but didn't cause error
+# D = {'Brad': 38, 'Shane': 32, 'Kevin': 3}
+# E = {key:D[key] for key in D.keys() - {'z', 'Brad', 'Shane'}}
+# print(E)  # {'Kevin': 3}  notice 'z' was in there, but didn't cause error
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -329,7 +329,7 @@ from pprint import pprint
 # import os
 # from pprint import pprint
 #
-# print(os.getcwd())  # /Brett/Dropbox/Python Subjects
+# print(os.getcwd())  # /Brad/Dropbox/Python Subjects
 #
 # # DICTIONARY COMPREHENSION printing directory file list, sorted by file size
 # file_size_and_file = {os.path.getsize(name): name  for name in os.listdir(os.getcwd())}
@@ -373,11 +373,11 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # DICTIONARY COMPREHENSION to get ALL KEY: VALUE
 
-# c = {'Shaina': 34, 'Kayden': 3, 'Brett': 38}
+# c = {'Shane': 34, 'Kevin': 3, 'Brad': 38}
 # c1 = {k: v for k, v in c.items()}
 # print(c1)
 #
-# d = {'Brett': ('caucasian', 'male', 38)}
+# d = {'Brad': ('caucasian', 'male', 38)}
 # d1 = {k: (v[1], v[2]) for k, v in d.items()}
 # print(d1)
 
@@ -385,12 +385,12 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # ITERATING to get each KEY: VALUE
 
-# d = {'Shaina': 34, 'Kayden': 3, 'Brett': 38}
+# d = {'Shane': 34, 'Kevin': 3, 'Brad': 38}
 # for item in d:                     # Iterate only keys
 #     print(item, d[item])           # Print key and key value i.e item, d[item]
 #
 #
-# d = {'Shaina': 34, 'Kayden': 3, 'Brett': 38}
+# d = {'Shane': 34, 'Kevin': 3, 'Brad': 38}
 # for k, v in d.items():             # Iterate key/value pairs
 #     print(k, v)                    # Print all key/value pairs
 
@@ -446,7 +446,7 @@ from pprint import pprint
 # ITERATE TO SWAP KEYS WITH VALUES
 # Swap keys: values with a dictionary comprehension
 
-# d = {'Shaina': 34, 'Kayden': 3, 'Brett': 38}
+# d = {'Shane': 34, 'Kevin': 3, 'Brad': 38}
 # inverted_d = {v: k for k, v in d.items()}
 # print(d)
 # print(inverted_d)
@@ -455,11 +455,11 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # ADD A NEW KEY/VALUE IF "NOT IN" EXISTING DICTIONARY
 
-# d = {'Shaina': 34, 'Brett': 38}
-# if 'Kayden' not in d:
-#     d['Kayden'] = 3
+# d = {'Shane': 34, 'Brad': 38}
+# if 'Kevin' not in d:
+#     d['Kevin'] = 3
 #     print(d)
-# {'Kayden': 3, 'Shaina': 34, 'Brett': 38}
+# {'Kevin': 3, 'Shane': 34, 'Brad': 38}
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -535,9 +535,9 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # ITERATE TO COUNT WORDS IN A STRING and print a frequency dictionary
 # Frequency String, counting occurrences
-# s = 'brett brett brett shaina shaina kayden'
+# s = 'Brad Brad Brad Shane Shane Kevin'
 # words = s.split()
-# print(words)  # ['brett', 'brett', 'brett', 'shaina', 'shaina', 'kayden']
+# print(words)  # ['Brad', 'Brad', 'Brad', 'Shane', 'Shane', 'Kevin']
 # d = {}
 # for w in words:
 #     if w in d:
@@ -549,20 +549,20 @@ from pprint import pprint
 
 # ------------------------------------------------------------------------------------------------ #
 # Function that prints a frequency dictionary
-# s = 'brett brett shaina shaina kayden oliver'
+# s = 'Brad Brad Shane Shane Kevin Ollie'
 # def make_freq_dict(s):
 #     """
 #     Accept 1 string argument and return a dictionary whose keys are the words of s,
 #     and whose values are the counts of those words.
 #     """
-#     words = s.split()   # words = ['brett', 'brett', 'shaina', 'shaina', 'kayden', 'oliver']
+#     words = s.split()   # words = ['Brad', 'Brad', 'Shane', 'Shane', 'Kevin', 'Ollie']
 #     d = {}              # d = {}
 #     for w in words:
 #         if w in d:      # Is name in list already?
 #             d[w] += 1   # If yes add 1 to the value
 #         else:
 #             d[w] = 1    # If no add new name and set its value equal to 1
-#     print(d)            # {'brett': 2, 'shaina': 2, 'kayden': 1, 'oliver': 1}
+#     print(d)            # {'Brad': 2, 'Shane': 2, 'Kevin': 1, 'Ollie': 1}
 # make_freq_dict(s)
 
 
