@@ -130,31 +130,31 @@
 # ------------------------------------------------------------------------------------------------ #
 # ITERATING a sequence of tuples of varying length
 # characteristics = [
-#     ('brett', 38, 'male'),
-#     ('shaina', 'female'),
-#     ('kayden', 3)
+#     ('Brad', 38, 'male'),
+#     ('Shane', 'female'),
+#     ('Kevin', 3)
 # ]
-# def do_brett(age, sex):
-#     print('brett', age, sex)
+# def do_Brad(age, sex):
+#     print('Brad', age, sex)
 #
-# def do_shaina(sex):
-#     print('shaina', sex)
+# def do_Shane(sex):
+#     print('Shane', sex)
 #
-# def do_kayden(age):
-#     print('kayden', age)
+# def do_Kevin(age):
+#     print('Kevin', age)
 #
 # print('Results:')
 # for tag, *args in characteristics:
-#     if tag == 'brett':
-#         do_brett(*args)
-#     elif tag == 'shaina':
-#         do_shaina(*args)
+#     if tag == 'Brad':
+#         do_Brad(*args)
+#     elif tag == 'Shane':
+#         do_Shane(*args)
 #     else:
-#         do_kayden(*args)
+#         do_Kevin(*args)
 # Results:
-# brett 38 male
-# shaina female
-# kayden 3
+# Brad 38 male
+# Shane female
+# Kevin 3
 
 # ------------------------------------------------------------------------------------------------ #
 # ...
