@@ -35,15 +35,15 @@ import os
 # ------------------------------------------------------------------------------------------------ #
 # S.add()
 
-# S = {7.12, 'Brett', 0, -34, ('66', 99)}
+# S = {7.12, 'Brad', 0, -34, ('66', 99)}
 # S.add('xoxo')
-# print(S)     # {0, 'xoxo', 7.12, 'Brett', ('66', 99), -34}
+# print(S)     # {0, 'xoxo', 7.12, 'Brad', ('66', 99), -34}
 
 
 # ------------------------------------------------------------------------------------------------ #
 # S.clear()
 
-# S = {7.12, 'Brett', 0, -34, ('66', 99)}
+# S = {7.12, 'Brad', 0, -34, ('66', 99)}
 # S.clear()    # S is now an empty set
 # print(S)
 
@@ -51,9 +51,9 @@ import os
 # ------------------------------------------------------------------------------------------------ #
 # S.copy()
 
-# S = {7.12, 'Brett', 0, -34, ('66', 99)}
+# S = {7.12, 'Brad', 0, -34, ('66', 99)}
 # S1 = S.copy()   # Shallow copy
-# print(S1)       # {0, ('66', 99), 'Brett', -34, 7.12}
+# print(S1)       # {0, ('66', 99), 'Brad', -34, 7.12}
 # print(S == S1)  # True
 
 
@@ -77,7 +77,7 @@ import os
 # S2 = {2, 4, 6}
 # S.difference_update(S2)   # If it's in S2 then remove it from S
 # S -= S2                   # Pythonic AND faster than S.difference() because it DOES NOT create a new set
-# print(S)                  # {'Brett', ('66', 99), -34}
+# print(S)                  # {'Brad', ('66', 99), -34}
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -232,8 +232,8 @@ import os
 # s = set()                                          # Empty set
 # s = {22, 33, 44, (55, 66)}                         # Set
 # s = set(['lol', 'omg', 99, 34.5, 99])              # from a List
-# s = set((7, 'Brett', 7, -34, ('66', 99), 7))       # from a Tuple
-# dict = {'Brett': 38, 'Shaina': 34, 'Kayden': 3}    # Dictionary for below
+# s = set((7, 'Brad', 7, -34, ('66', 99), 7))        # from a Tuple
+# dict = {'Brad': 38, 'Shane': 34, 'Kevin': 3}       # Dictionary for below
 # dict_keys = set(dict)                              # from a Dictionary (Returns keys only)
 # dict_values = set(dict.values())                   # from a Dictionary (Returns values only)
 # print(dict_keys, dict_values)
@@ -242,7 +242,7 @@ import os
 # ------------------------------------------------------------------------------------------------ #
 # Membership testing "in" and "not in"
 #
-# s = {7, 'Brett', 0, -34, ('66', 99), 'Dog'}
+# s = {7, 'Brad', 0, -34, ('66', 99), 'Dog'}
 # print(('66', 99) in s)
 # True
 # print(-34 not in s)
