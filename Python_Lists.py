@@ -75,9 +75,9 @@
 
 
 # L.sort()
-# L = ['Brett', '_under', 'brad', 'Art', '341']
+# L = ['Brad', '_under', 'brad', 'Art', '341']
 # L.sort(key=str.lower, reverse=False)
-# ['341', '_under', 'Art', 'brad', 'Brett']
+# ['341', '_under', 'Art', 'brad', 'Brad']
 
 # Notice key=str.lower
 # sort() replaces object "in place" and does not create a new object.
@@ -135,11 +135,11 @@
 # from_list_comp_evens = [i for i in range(11) if i % 2 == 0]
 # from_nested_tuple = list(('lol', -17, ('albert', 33), 33.4))
 # from_range = list(range(1, 6))
-# from_dict = list(dict(Brett=38, Shaina=32))
+# from_dict = list(dict(Brad=38, Shane=32))
 # from_split = 'one two three four five'.split()
 
 # can_be_mixed_data_types = [89.5, [], {}, 3*3, ('He', 'Man'), 'amazon.com']
-# can_be_nested = ['brett', 38, [1978, 'male', 'white']]
+# can_be_nested = ['Brad', 38, [1978, 'male', 'white']]
 
 # ---------------------------------------------------------------------------------------------- #
 # CREATE A LIST from(input) until "stop" is typed
@@ -403,7 +403,7 @@
 # ZIP()
 
 # Q = ['name', 'age', 'sex', 'ethnicity']
-# A = ['shaina', '38', 'female']
+# A = ['Shane', '38', 'female']
 # T1 = tuple([(q, a) for q, a in zip(Q, A)])  # <class 'tuple'>
 # L1 = [(q, a) for q, a in zip(Q, A)]         # <class 'list'>
 # D1 = {k:v for k, v in zip(Q, A)}            # <class 'dict'>
