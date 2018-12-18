@@ -47,7 +47,7 @@
 
 # L.index(x, start, end)      # Returns the index value of 1st occurrence of x
 # L.index(6)
-#  2
+# 2
 # L.index(2, 1, 3)            # Look for 2, include index 1 up to but not including index 3
 # ValueError: 2 is not in list
 
