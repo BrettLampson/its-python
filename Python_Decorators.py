@@ -10,21 +10,21 @@ print('-'*50)
 # preceding its name with an at symbol (@).
 
 
-def document_it(func):
-    def new_function(*args, **kwargs):
-        print('Running Function: ', func.__name__)
-        print('Positional arguments: ', args)
-        print('Keyword arguments: ', kwargs)
-        result = func(*args, **kwargs)
-        print('Result: ', result)
-        return result
-    return new_function
+# def document_it(func):
+#     def new_function(*args, **kwargs):
+#         print('Running Function: ', func.__name__)
+#         print('Positional arguments: ', args)
+#         print('Keyword arguments: ', kwargs)
+#         result = func(*args, **kwargs)
+#         print('Result: ', result)
+#         return result
+#     return new_function
 
-@document_it  # <---- DECORATOR
-def add_numbers(a, b):
-    return a + b
+# @document_it  # <---- DECORATOR
+# def add_numbers(a, b):
+#     return a + b
 
-add_numbers(3, 2)
+# add_numbers(3, 2)
 
 
 # # FUNCTION USED WHEN DECORATING
