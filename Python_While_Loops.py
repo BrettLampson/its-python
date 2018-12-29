@@ -96,15 +96,18 @@ print()
 # WHILE LOOP
 # ------------------------------------------------------------------------------------------------ #
 # # Loop until something occurs, but not sure when?  Infinite while loop with break.
-# email_list = []
+# email_list = set()
 # while True:
 #     email_entry = str(input("Enter an email address [type q to 'quit']: "))
 #     if email_entry == 'q':
 #         print('Your session has ended.')
 #         break
 #     else:
-#         email_list.append(email_entry)
+#         email_list.add(email_entry)
 #         print("The email you've added is ", email_entry)
 #         print(email_list, end='\n')
 
 
+# ------------------------------------------------------------------------------------------------ #
+# WHILE LOOP
+# ------------------------------------------------------------------------------------------------ #
