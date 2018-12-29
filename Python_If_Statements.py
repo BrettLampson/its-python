@@ -1,7 +1,8 @@
-
+print()
 
 # ---------------------------------------------------------------------------------------------- #
 # IF / ELIF / ELSE
+# ---------------------------------------------------------------------------------------------- #
 # If and Else statements ONLY check whether a condition is True or False.
 # You can test True, False, ==, !=, <, >, <=, >=, in, not in... and expressions that evaluate to True or False
 # Boolean operators = and, or, not
@@ -95,7 +96,7 @@
 # ---------------------------------------------------------------------------------------------- #
 # EXAMPLES
 
-# order is important, otherwise you get mixed results.
+# # order is important, otherwise you get mixed results.
 # age = 60
 # if age <= 4:
 #     price = 0.00
@@ -104,15 +105,15 @@
 # else:
 #     price = 10.00
 # print('Your admission cost is $', str(price))
-# Your admission cost is $ 10.00
+# # Your admission cost is $ 10.00
 
 
 # ---------------------------------------------------------------------------------------------- #
 # CONDITIONAL EXPRESSION
 
-# food = input('What is your fav food?')
+# food = input('What is your fav food?: ')
 # food = food.lower()
-# print('Yuck' if food == 'pizza' else 'Yummy')
+# print('Yuck' if food == 'olives' else 'Yummy')
 
 
 # ---------------------------------------------------------------------------------------------- #
