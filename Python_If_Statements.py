@@ -115,14 +115,16 @@ print()
 
 
 # ---------------------------------------------------------------------------------------------- #
-# GENERAL SYNTAX
+# NESTED IF
 
-# while True:
-#     item = get_next_item()
-#     if not item:
-#         break
-#     process_item(item)"
-
+# name = input('Hi, who are you?: ')
+# if name.lower() == 'brett':
+#     print('Thanks', name.title() + ',')
+#     password = input('Enter our password: ')
+#     if password == 'bazinga':
+#         print('Come in', name)
+# else:
+#     print('Begone', name.title() + '!')
 
 
 # ---------------------------------------------------------------------------------------------- #
