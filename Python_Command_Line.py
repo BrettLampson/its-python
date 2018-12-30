@@ -30,7 +30,7 @@
 
 # python2.7 -m pip install SomePackage        #specifically Python 2.7
 # python3   -m pip install SomePackage        #default Python 3
-# python3.6 -m pip install SomePackage        #specifically Python 3.6
+# python3.7 -m pip install SomePackage        #specifically Python 3.6
 
 # python -m pip install SomePackage==1.0.4    # specific version
 # python -m pip install 'SomePackage>=1.0.4'  # minimum version
