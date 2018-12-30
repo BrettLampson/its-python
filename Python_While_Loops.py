@@ -111,3 +111,15 @@ print()
 # ------------------------------------------------------------------------------------------------ #
 # WHILE LOOP
 # ------------------------------------------------------------------------------------------------ #
+# input an integer, print square if its odd, skip if its even
+# while True:
+#     value = input('Odd integer please [q to quit]: ')
+#     if value == 'q':
+#         break
+#     number = int(value)
+#     if number % 2 == 0:
+#         print(number, "isn't an odd integer")
+#         continue
+#     print(number, 'squared is', number * number)
+#     break
+# print('we broke out of the while loop')
