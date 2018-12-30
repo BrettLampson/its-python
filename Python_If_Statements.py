@@ -27,11 +27,9 @@ print()
 # not x	       # if x is false, then True, else False
 
 
-# If the element we're checking isn't a boolean.  What does Python consider True or False?
-# A False value doesn't need to be explicitly False.
-
 # ---------------------------------------------------------------------------------------------- #
-# Following are Falsy
+# If the element isn't a boolean.
+# The following are "falsy"
 
 # False    # boolean False
 # None     # null
@@ -123,7 +121,8 @@ print()
 #     item = get_next_item()
 #     if not item:
 #         break
-#     process_item(item)
+#     process_item(item)"
+
 
 
 # ---------------------------------------------------------------------------------------------- #
