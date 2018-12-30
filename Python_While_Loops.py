@@ -36,10 +36,11 @@ print()
 
 
 # ------------------------------------------------------------------------------------------------ #
-# WHILE LOOP
+# WHILE LOOP with ELSE CONDITION
 # ------------------------------------------------------------------------------------------------ #
-# Check for something and 'break' as soon as its found
-# numbers = [1, 4, 13, 41]
+# Check for something and 'break' as soon as its found.
+# Else checks if the while loop completed normally.
+# numbers = [1, 3, 13, 41]
 # position = 0
 # while position < len(numbers):
 #     number = numbers[position]
@@ -49,7 +50,7 @@ print()
 #         break
 #     position += 1
 # else:  # break not called
-#     print('No even number found')
+#     print('No even number was found....')
 
 
 # ------------------------------------------------------------------------------------------------ #
