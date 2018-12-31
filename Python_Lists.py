@@ -138,6 +138,7 @@
 # from_dict = list(dict(Brad=38, Shane=32))
 # from_split = 'one two three four five'.split()
 
+
 # can_be_mixed_data_types = [89.5, [], {}, 3*3, ('He', 'Man'), 'amazon.com']
 # can_be_nested = ['Brad', 38, [1978, 'male', 'white']]
 
