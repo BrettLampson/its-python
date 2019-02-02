@@ -7,7 +7,6 @@ from pprint import pprint
 # ------------------------------------------------------------------------------------------------ #
 # DICTIONARY
 # Mutable, Unordered, Iterable
-# NOT a sequence
 
 # WHEN TO USE A DICTIONARY:
 # 1) When working with key : value pairs of data.
@@ -22,7 +21,8 @@ from pprint import pprint
 # WAY IT WORKS:
 # Each key is converted to a number called a "hash value" using a special hash function.
 # The associated values are stored in an underlying list at the index location of their hash value.
-# Accessing a value involves converting the key to a hash value then jumping to that index location in the list.
+# Accessing a value involves converting the key to a hash value then jumping to that index 
+# location in the list.
 
 
 # ------------------------------------------------------------------------------------------------ #
