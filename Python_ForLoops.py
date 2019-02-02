@@ -5,9 +5,9 @@ print()
 
 # ------------------------------------------------------------------------------------------------ #
 # PRINT ALL METHODS IN A MODULE (except anything starting with '__')
-for i in dir(list):
-    if not i.startswith('__'):
-        print(i)
+# for i in dir(list):
+#     if not i.startswith('__'):
+#         print(i)
 
 
 # ------------------------------------------------------------------------------------------------ #
