@@ -9,11 +9,12 @@ print('\n# ' + '-'*80 + ' #')
 # URLLIB library
 
 from urllib.request import urlopen
-html = urlopen('http://pythonscraping.com/pages/page1.html')
-print(html.read())
 
-# urlopen is used to open a remote object across a network and read it.
+# urlopen('url') is used to open a remote object across a network and read it.
+html = urlopen('http://pythonscraping.com/pages/page1.html')
+
 # It can read: HTML files, image files, other files.
+print(html.read())
 
 
 print('\n# ' + '-'*80 + ' #')
@@ -29,6 +30,7 @@ print(bs)
 print('Getting Specific Tags')
 print(bs.title)
 print(bs.h1)
+
 
 # Note this returns only the first instance of h1 tag found on the page.
 # bs4 doesnt need .read() after the html either
