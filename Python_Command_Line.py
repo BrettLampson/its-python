@@ -54,12 +54,12 @@
 
 # ------------------------------------------------------------------------------------------------ #
 # RUNNING A SCRIPT FROM COMMAND LINE (win + r)
-#! python3
+
 # change directory to where the script is located
 # type this with 2 arguments as follows (no commas):
-# python3.7 percent_of.py 49.95 53.95
+# python3.7(or whatever version you want to run it) percent_of.py 49.95 53.95
 
-# (The code for percent_of.py)
+# (Code Example to run from command line)
 #! python3
 
 # import sys
