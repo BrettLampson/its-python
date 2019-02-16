@@ -24,14 +24,15 @@ print('\n# ' + '-'*40 + ' #')
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
 
-html = urlopen('http://www.pythonscraping.com/pages/page1.html')
+html = urlopen('https://greensock.com/examples-showcases')
 
 bs = BeautifulSoup(html, 'html.parser')
-print(bs)
+# print(bs)
 
 # Getting Specific Tags
 print(bs.title)
-print(bs.h1)
+# print(bs.h1)
+
 
 
 # Note this returns only the first instance of h1 tag found on the page.
