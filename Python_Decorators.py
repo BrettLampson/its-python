@@ -1,5 +1,5 @@
 
-print('-'*50)
+print('-'*49)
 # ------------------------------------------------------------------------------------------------ #
 # DECORATORS
 
@@ -9,22 +9,7 @@ print('-'*50)
 # function or method that is modified in some way. A decorator is indicated by
 # preceding its name with an at symbol (@).
 
-
-# def document_it(func):
-#     def new_function(*args, **kwargs):
-#         print('Running Function: ', func.__name__)
-#         print('Positional arguments: ', args)
-#         print('Keyword arguments: ', kwargs)
-#         result = func(*args, **kwargs)
-#         print('Result: ', result)
-#         return result
-#     return new_function
-
-# @document_it  # <---- DECORATOR
-# def add_numbers(a, b):
-#     return a + b
-
-# add_numbers(3, 2)
+# 
 
 
 # # FUNCTION USED WHEN DECORATING
@@ -38,19 +23,21 @@ print('-'*50)
 #         return result
 #     return new_function
 
-# # NOT DECORATED
-# def thingsInCar(*args, **kwargs):
-#     print(args, kwargs)
-# thingsInCar('subway receipt', permanent1='phone charger', permanent2='car seat')
-#
+
 # # DECORATE IT
 # @details
 # def thingsInCar(*args, **kwargs):
 #     return(args, kwargs)
-# thingsInCar('subway receipt', permanent1='phone charger', permanent2='car seat')
-#
+# thingsInCar('work clothes', perm_1='phone charger')
+
+
 # # DECORATE IT
 # @details
 # def add_numbers(a, b):
 #     return a + b
 # add_numbers(144, 6)
+# # RESULT
+# Running Function:  add_numbers
+# Positional arguments:  (144, 6)
+# Keyword arguments:  {}
+# Result:  150
