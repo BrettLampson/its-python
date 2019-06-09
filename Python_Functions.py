@@ -17,15 +17,20 @@
 # 2) Use them as arguments to other functions
 # 3) Return them from functions
 # 4) Other: nest def statements inside if statements, while loops and other def statements
+# 5) Variables inside a function are local.  Make them global by declaring them
+#    inside the function "global x; x = 1".
 
+# IMPORTANT:  Functions return "None" if there is no "return" startment.
 
-# General Syntax
-# def functionName(parameters):
+# # General Syntax
+# def functionName(positional, default, *args, **kwargs):
 #     """
-#     Docstring
+#     docstrings should include the functions purpose and required parameters
+#     and what the function returns
 #     """
-#     Suite
+#     suite
 
+# print(functionName.__doc__)  # to see docstring information.
 
 # ---------------------------------------------------------------------------------------------- #
 # FUNCTIONS used as MODULES
@@ -65,25 +70,31 @@
 
 from pprint import pprint
 
-# Positional arguments
-def my_dinner(protein, side1, side2):
-    return {'Protein': protein, 'Side1': side1, 'Side2': side2}
-pprint(my_dinner('Chicken', 'Broccoli', 'Potatoes'))
+# # Positional arguments
+# def my_dinner(protein, side1, side2):
+#     return {'Protein': protein, 'Side1': side1, 'Side2': side2}
+# pprint(my_dinner('Chicken', 'Broccoli', 'Potatoes'))
 
 
-# Keyword arguments
-def my_dinner(protein='Steak', side1='Potatoes', side2='Asparagus'):
-    return {'Protein': protein, 'Side1': side1, 'Side2': side2}
-# Notice keyword arg side2(Asparagus) is added when only 2 of 3 paramaters used
-pprint(my_dinner('Chicken', 'Rice'))
-# {'Protein': 'Chicken', 'Side1': 'Rice', 'Side2': 'Asparagus'}
+# # Keyword arguments
+# def my_dinner(protein='Steak', side1='Potatoes', side2='Asparagus'):
+#     return {'Protein': protein, 'Side1': side1, 'Side2': side2}
+# # Notice keyword arg side2(Asparagus) is added when only 2 of 3 paramaters used
+# pprint(my_dinner('Chicken', 'Rice'))
+# # {'Protein': 'Chicken', 'Side1': 'Rice', 'Side2': 'Asparagus'}
 
 
-# Positional AND Keyword arguments
-def my_dinner(restaurant, protein, *sides, **drinks):
-    print('\nReceipt: \n')
-    return {'Restaurant': restaurant, 'Protein': protein, 'Sides': sides, 'Drinks': drinks}
-pprint(my_dinner('subway', 'chicken', 'rice', 'beans', beer='amber', wine='merlot', other='water'))
+# # Positional AND Keyword default arguments
+# def my_dinner(restaurant, protein, side='rice'):
+#     return {'Restaurant': restaurant, 'Protein': protein, 'Side': side}    
+# pprint(my_dinner('subway', 'chicken'))
+# pprint(my_dinner('subway', 'chicken', 'beans'))
+
+
+# # Positional AND Keyword arguments
+# def my_dinner(restaurant, protein, *sides, **drinks):
+#     print({'Restaurant': restaurant, 'Protein': protein, 'Sides': sides, 'Drinks': drinks})
+# pprint(my_dinner('subway', 'chicken', 'rice', 'beans', beer='amber', wine='merlot', other='water'))
 
 
 # ---------------------------------------------------------------------------------------------- #
@@ -192,6 +203,15 @@ pprint(my_dinner('subway', 'chicken', 'rice', 'beans', beer='amber', wine='merlo
 
 
 # ---------------------------------------------------------------------------------------------- #
+# ASSIGNING  FUNCTIONS TO VARIALBES
+
+# def tipCalc(total):
+#   return ("$" + str(total * .20))
+# tip = tipCalc
+# print(tip(30))  # $6.0
+
+
+# ---------------------------------------------------------------------------------------------- #
 # LAMBDA FUNCTION
 # ---------------------------------------------------------------------------------------------- #
 # A simple 1 line function
@@ -261,6 +281,17 @@ pprint(my_dinner('subway', 'chicken', 'rice', 'beans', beer='amber', wine='merlo
 # ---------------------------------------------------------------------------------------------- #
 
 # "yield" sends a result back to the caller, and remembers where it left off.
+# "yield from" is a new keyword in 3.3, makes it possible to string generators
+# together.
+
+# # "yield from" example: 
+# def subgen(x):
+#   for i in range(x):
+#     yield i
+# def gen(y):
+#   yield from subgen(y)
+# for q in gen(6):
+#   print(q)
 
 
 # def myrange(first=0, last=10, step=1):
