@@ -19,28 +19,26 @@
 
 # ------------------------------------------------------------------------------------------------ #
 # RUN this on the command line:
-# Brett$ cd 'Dropbox/Python Subjects'
-# Boss:Python Subjects Brett$ python3.7 Python_Argv.py Love Friendships Purpose
+# cd 'Dropbox/Python Subjects'
+# python3 Python_Argv.py Love Friendships Purpose
 
 # from sys import argv
 # script, first, second, third = argv
-#
 # print('Script Name = ', script)
-# print('Most Important = ', first)
-# print('Then Comes = ', second)
-# print('Last But Not Least = ', third)
+# print('First Argument = ', first)
+# print('Second Argument = ', second)
+# print('Third Argument = ', third)
 
 
 # ------------------------------------------------------------------------------------------------ #
-# RUNNING A SCRIPT FROM COMMAND LINE (win + r)
-#! python3
-# change directory to where the script is located
+# RUNNING A SCRIPT FROM COMMAND LINE
+# cd into directory where the script is located
 # type this with 2 arguments as follows (no commas):
 # pchange.py 49.95 53.95
 
-# (The code for pchange.py)
-#! python3
+# file code shown below:
 
+#! python3
 # import sys
 #
 # def pchange(old, new):
