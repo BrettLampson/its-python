@@ -1,4 +1,4 @@
-
+print('-'*30)
 # from pprint import pprint
 
 # ------------------------------------------------------------------------------------------------ #
@@ -17,45 +17,46 @@
 
 
 # ------------------------------------------------------------------------------------------------ #
-# Crash Course Book
+# CLASSES - Crash Course Book
 
-# class Car:
-#     """Representation of a car."""
-#
-#     def __init__(self, make, model, year):  # <--- Method
-#         """Initialize the following attributes to describe a car."""
-#         self.make = make         # <--- Attribute
-#         self.model = model       # <--- Attribute
-#         self.year = year         # <--- Attribute
-#         self.odometer_value = 0  # <--- Attribute that will change over time
-#
-#     def get_full_name(self):     # <--- Method
-#         """Return a neatly formatted descriptive name"""
-#         full_name = str(self.year) + ' ' + self.make + ' ' + self.model
-#         return full_name.title()
-#
-#     def display_odometer(self):
-#         """Print the cars current mileage"""
-#         return 'Current Miles = ' + str(self.odometer_value)
-#
-#     def increment_odometer(self, miles: int):
-#         """Add new mileage to old mileage"""
-#         self.odometer_value += miles
-#         return 'Current Miles = ' + str(self.odometer_value)
-#
-#
-# shaina_car = Car('Honda', 'CR-V', 2016)  # <--- Instance of the Car class
-# print(shaina_car.get_full_name())
-# print(shaina_car.display_odometer())
-# print(shaina_car.increment_odometer(5))
-# print(shaina_car.increment_odometer(1))
+class Car:
+    """Representation of a car."""
+
+    def __init__(self, make: str, model: str, year: int):  # <--- Method
+        """Initialize the following attributes to describe a car."""
+        self.make = make         # <--- Attribute
+        self.model = model       # <--- Attribute
+        self.year = year         # <--- Attribute
+        self.odometer_value = 0  # <--- Attribute that will change over time
+
+    def get_full_name(self):     # <--- Method
+        """Return a neatly formatted descriptive name"""
+        full_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return full_name.title()
+
+    def display_odometer(self):
+        """Print the cars current mileage"""
+        return 'Current Miles = ' + str(self.odometer_value)
+
+    def increment_odometer(self, miles: int):
+        """Add new mileage to old mileage"""
+        self.odometer_value += miles
+        return 'Current Miles = ' + str(self.odometer_value)
+
+
+shaina_car = Car('Honda', 'CR-V', 2016)  # <--- Instance of the Car class
+print(shaina_car.get_full_name())
+shaina_car.odometer_value = 99       
+print(shaina_car.display_odometer())
+print(shaina_car.increment_odometer(1))
+
 
 
 # Modify an attributes value in 3 ways:
 
 # 1) directly through instance
-# shaina_car.odometer_value = 33
-# print(shaina_car.display_odometer())  # Current Miles = 33
+# shaina_car.odometer_value = 500
+# print(shaina_car.display_odometer())  # Current Miles = 500
 
 # 2) set the value through a method
 # def update_odometer(self, mileage):
@@ -67,31 +68,40 @@
 #     """Add new mileage to old mileage"""
 #     self.odometer_value += miles
 
+# ------------------------------------------------------------------------------------------------ #
+# INHERITANCE
+print('\n' + '-'*2 + 'Inheritance' + '-'*2)
 
-# class ElectricCar(Car):  # <--- Inheriting attributes from Car class
-#     """Represents aspects of a car, but specific to electric vehicles"""
-#
-#     def __init__(self, make, model, year):
-#         """Initialize attributes of the parent class."""
-#         super().__init__(make, model, year)  # <--- super() helps pass on attributes of parent class
-#         self.battery_size = 70  # <--- attribute specific to child class ElectricCar
-#
-#     def describe_battery(self):
-#         """Returns a statement describing the battery size"""
-#         pretext = 'This battery has '
-#         return pretext + str(self.battery_size) + '-kWh'
-#
-#
-# brett_car = ElectricCar('tesla', 'model s', 2018)
-# print(brett_car.get_full_name())
-# print(brett_car.display_odometer())
-# print(brett_car.describe_battery())
+class ElectricCar(Car):       # <--- Inheriting attributes from Car class
+    """Inherits attributes of a car, but specific to electric vehicles"""
+
+    def __init__(self, make, model, year):
+        """Initialize attributes of the parent class."""
+        super().__init__(make, model, year)  # <--- super() helps pass on attributes of parent class
+        self.battery_size = 70               # <--- new attribute specific to child class ElectricCar
+        self.color = 'burnt orange'
+
+    def describe_battery(self):
+        """Returns a statement describing the battery size"""
+        pretext = 'This battery has '
+        return pretext + str(self.battery_size) + '-kWh'
+
+
+brett_car = ElectricCar('tesla', 'model s', 2018)
+print(brett_car.get_full_name())            # <--- parent method 
+brett_car.odometer_value = 200              # <--- modifying parent attribute
+print(brett_car.display_odometer())         # <--- parent method
+print('Color = ' + brett_car.color)                      # <--- new attribute, notice its global 
+print(brett_car.describe_battery())         # <--- new method
+brett_car.battery_size = 80                 # <--- new variable
+print('Battery = ' + str(brett_car.battery_size) + '-kWh')
+
 
 # WIP try override parent class method by using same method name with different attributes...
 
 
 # ------------------------------------------------------------------------------------------------ #
-# Corey Schafer Example
+# CLASSES - Corey Schafer Example
 
 # class Employee:
 #     """This is a docstring, use it to describe the class"""
@@ -188,7 +198,7 @@
 
 
 # ------------------------------------------------------------------------------------------------ #
-# Socratica Example
+# CLASSES - Socratica Example
 
 
 # class User:
