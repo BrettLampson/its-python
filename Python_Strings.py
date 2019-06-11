@@ -1,4 +1,5 @@
 
+
 # ------------------------------------------------------------------------------------------------ #
 # STRINGS
 # ------------------------------------------------------------------------------------------------ #
@@ -49,18 +50,18 @@ import sys
 # s.capitalize()
 # Return a copy of the string with its first character capitalized and the rest lowercase.
 
-# s = 'Brad lampson'
+# s = 'brett lampson'
 # print(s.capitalize())
-# Brad lampson
+# Brett lampson
 
 
 # ------------------------------------------------------------------------------------------------ #
 # s.casefold()
 # Casefold is similar to lowercase but more aggressive
 
-# s = 'Brad lampson'
+# s = 'BRETT lampson'
 # print(s.casefold())
-# Brad lampson
+# brett lampson
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -68,9 +69,9 @@ import sys
 # Return centered in a string of length width.
 # Padding is done using the fillchar (default is an ASCII space)
 
-# s = 'Brad lampson'
+# s = 'brett lampson'
 # print(s.center(21, '-'))
-#  ----Brad lampson----
+#  ----brett lampson----
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -89,7 +90,7 @@ import sys
 
 # s = "Babe Ruth, Yankees"
 # print(s.encode('utf-8'))
-# b'Babe Ruth, Yankees'
+# b'Babe Ruth, Yankees'Yankees
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -185,14 +186,14 @@ import sys
 # print(a, b, c, d, e, f, g, sep='\n')
 
 # # F-STRINGS, aka "string interpolation"
-# name = 'Brad'
+# name = 'Brett'
 # age = '39'
 # print(f'My name is {name} and I am {age} years old')
 # print('My name is {name} and I am {age} years old')
-# print('My name is {name} and I am {age} years old'.format(name='Brad', age='40'))
+# print('My name is {name} and I am {age} years old'.format(name='Brett', age='40'))
 
 # # Using **locals() to feed .format()
-# one = 'Brad'
+# one = 'Brett'
 # two = 'Python'
 # print('{one} likes programming in {two}'.format(**locals()))
 
@@ -306,9 +307,9 @@ import sys
 # ------------------------------------------------------------------------------------------------ #
 # s.isupper()
 
-# s = 'Brad LAMPSON'
+# s = 'BRETT LAMPSON'
 # print(s.isupper())  # True
-# s1 = 'Brad lampson'
+# s1 = 'BRETT lampson'
 # print(s1.isupper())  # False
 
 
@@ -347,7 +348,7 @@ import sys
 # vow = 'aeiou'
 # num = '12345'
 # transtbl = str.maketrans(vow, num)   # or you could plug strings in as args
-# s = 'Brad Lampson'
+# s = 'Brett Lampson'
 # print(s.translate(transtbl))         # br2tt l1mps4n
 
 
@@ -462,10 +463,10 @@ import sys
 # s.splitlines([keepends])
 # Return a list of the lines in the string, breaking at line boundaries
 
-# s = 'Brad Lampson'
-# s = 'Brad\nLamp\nson'
-# print(s.splitlines())               # ['Brad', 'Lamp', 'son']
-# print(s.splitlines(keepends=True))  # ['Brad\n', 'Lamp\n', 'son']
+# s = 'Brett Lampson'
+# s = 'Brett\nLamp\nson'
+# print(s.splitlines())               # ['Brett', 'Lamp', 'son']
+# print(s.splitlines(keepends=True))  # ['Brett\n', 'Lamp\n', 'son']
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -500,8 +501,8 @@ import sys
 # ------------------------------------------------------------------------------------------------ #
 # s.title()
 
-# s = 'Brad lampson'
-# print(s.title())  # Brad Lampson
+# s = 'brett lampson'
+# print(s.title())  # Brett Lampson
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -510,15 +511,15 @@ import sys
 # alpha = 'aeiou'
 # numer = '12345'
 # transtbl = str.maketrans(alpha, numer)  # or you could plug strings in as args
-# s = 'Brad lampson'
+# s = 'brett lampson'
 # print(s.translate(transtbl))  # br2tt l1mps4n
 
 
 # ------------------------------------------------------------------------------------------------ #
 # s.upper()
 
-# s = 'Brad lampson'
-# print(s.upper())  # Brad LAMPSON
+# s = 'brett lampson'
+# print(s.upper())  # BRETT LAMPSON
 
 
 # ------------------------------------------------------------------------------------------------ #
@@ -538,9 +539,9 @@ import sys
 # ------------------------------------------------------------------------------------------------ #
 # CREATE A STRING
 
-# s = 'Brad Lampson'
+# s = 'Brett Lampson'
 # s = str(2 + 3)
-# s = ' '.join(['Brad', 'Lampson'])
+# s = ' '.join(['Brett', 'Lampson'])
 # print(s)
 
 
@@ -631,13 +632,13 @@ import sys
 # ------------------------------------------------------------------------------------------------ #
 # UNICODE, BYTES, STRINGS
 
-# bytes and bytearrays: sequences of 8-bit integers, used for binary data.
+# bytes and bytearrays: sequences of 8-bit integers 0-256, used for binary data.
 # strings: sequences of Unicode characters, used for text data.
 
 # Example, a function that takes a python unicode character
 # look up its name and looks up the character again from the name.
 
-# Unicodedata module
+# # Unicodedata module
 # def unicode_test(value):
 #     import unicodedata
 #     name = unicodedata.name(value)     # Returns the name assigned to the character chr as a string
@@ -667,14 +668,21 @@ import sys
 # foo = 'abcdefghijklmnopqrstuvwxyz1234567890'
 # bar = ['one', 'two', 'three', 'four', 'five']
 #
-# alphabet = slice(0, 26)   # abcdefghijklmnopqrstuvwxyz
+# alphabet = slice(0, 26)
 # alph = str(foo[alphabet])
-# print(alph)
-#
+# al = foo[alphabet]
+
+# print(alphabet)             # slice(0, 26, None)
+# print(type(alphabet))       # <class 'slice'>
+# print(type(alph))           # <class 'str'>
+# print(type(al))             # <class 'str'>
+# print(alph)                 # abcdefghijklmnopqrstuvwxyz
+
+
 # numbers = slice(26, 38)   # 1234567890
 # numb = int(foo[numbers])
 # print(numb)
-#
+
 # bar_none = slice(1, 4)    # ['two', 'three', 'four']
 # print(bar[bar_none])
 
@@ -738,20 +746,20 @@ import os
 # THE STRING MODULE
 # ------------------------------------------------------------------------------------------------ #
 
-# from string import Template
-#
-# s = Template('$who likes $what')
-# print(s.substitute(who='tim', what='kung pao'))
-# # 'tim likes kung pao'
-#
-# # d = dict(who='Tim')
-# # print(Template('$who likes $what').safe_substitute(d))
-# # # 'tim likes $what'
-#
-# # d = dict(who='Tim', what='something')  # what='something' fixes the KeyError
-# # print(Template('$who likes $what').substitute(d))
+from string import Template
+
+s = Template('$who likes $what chicken')
+print(s.substitute(who='tim', what='kung pao'))
+# 'tim likes kung pao'
+
+# d = dict(who='Tim')
+# print(Template('$who likes $what').safe_substitute(d))
+# # 'Tim likes $what'
+
+# d = dict(who='Tim', what='something')  # what='something' fixes the KeyError
+# print(Template('$who likes $what').substitute(d))
 # # KeyError: 'what'
-#
+
 # d = dict(who='Tim')
 # print(Template('Give $who $100').substitute(d))
 # # ValueError: Invalid placeholder in string: line 1, col 11
