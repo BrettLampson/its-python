@@ -1,75 +1,78 @@
-print()
+
 
 # ------------------------------------------------------------------------------------------------ #
 # WHILE LOOP
 # ------------------------------------------------------------------------------------------------ #
-# Use a while loop when:
+
+# When to use a while loop
+# Most of the time a for loop provides all the iteration controls we need.  There are
+# a few situations when we need a while loop.  Including:
 # 1) When we can't create a proper iterator to step through the items.
 # 2) During interactions with human users, when data isn't there until we get input.
+# Example: prompt user for their password.
+# pw_text = str(input('Enter Password: '))
+# conf__pw_text = str(input('Enter Password: '))
+# while True:
+#   if pw_text == conf__pw_text:
+#     print('Yep, same thing')
+#     break
+# print('post-code')
 
-# Example: Validate registrants password.
-# pw_text = str(input('Enter A New Password: '))
-# conf__pw_text = str(input('Confirm Your New Password: '))
-# if pw_text == conf__pw_text:
-    # password check complete
-
+# When true, the body is executed repeatedly. 
+# When false, the post-code executes then the program is terminated.
+# If break is executed, it immediately terminates the wile loop and 
+# not even the post-code ("Back Out") is executed.
+# while <condition>:
+#   body
+# post-code
 
 # ------------------------------------------------------------------------------------------------ #
 # WHILE LOOP
-# ------------------------------------------------------------------------------------------------ #
-# Password lockout after 5 failed attempts
 # import sys
-# guesses = 5
-# while guesses > 0:
-#     print('You have', guesses, 'guesses')
-#     askPass = str(input('Enter Password: '))
+# guesses = 0
+# while guesses < 5:
+#     print('Tries remaining =', 5 - guesses)
+#     askPass = input('Guess my name: ')
 #     if askPass.lower() != "brett":
-#         print("...invalid password")
-#         guesses -= 1
+#         print("No, sorry")
+#         guesses += 1
+#         continue
 #     else:
-#         print("Access Granted")
-#         run_this = input('What program should I run?: ')
-#         # if run_this in my_tuple_of_programs:
-# pw_fail_email = input('Please enter your email address to answer security questions:')
+#         break
+# print("Good Job! That's my name!")
 # print(input('Press any key to quit'))
 # sys.exit()
 
 
 # ------------------------------------------------------------------------------------------------ #
-# WHILE LOOP with ELSE CONDITION
-# ------------------------------------------------------------------------------------------------ #
-# Check for something and 'break' as soon as its found.
-# Else checks if the while loop completed normally.
-# numbers = [1, 3, 13, 41]
+# WHILE LOOP
+# # Use this loop to check for something and 'break' as soon as its found.
+# numbers = [1, 2, 3]
 # position = 0
 # while position < len(numbers):
 #     number = numbers[position]
-#     # Check for an even number
 #     if number % 2 == 0:
-#         print('Even number detected:', number, 'at index', position, '\n...my job is finished.')
+#         print('Found even number', number)
 #         break
 #     position += 1
-# else:  # break not called
-#     print('No even number was found....')
+# else: # break not called
+#     print('No even number found')
 
 
 # ------------------------------------------------------------------------------------------------ #
 # WHILE LOOP
-# ------------------------------------------------------------------------------------------------ #
-# Fibonacci Sequence up to (n)
 # def fib(n):
 #     a, b = 0, 1
 #     while b < n:
 #         print(b, end=' ')
 #         a, b = b, a + b
 # fib(56)
-# # # 1 1 2 3 5 8 13 21 34 55
+# # 1 1 2 3 5 8 13 21 34 55
 
 
 # ------------------------------------------------------------------------------------------------ #
 # WHILE LOOP
-# ------------------------------------------------------------------------------------------------ #
-# # Create a list from user input (type 'stop' to quit)
+# # Create a list from user input (while loop)
 # num_list = []
 # while True:
 #     num = str(input('Enter a number' + ' or type "stop" to quit: \n>>> '))
@@ -82,7 +85,6 @@ print()
 
 # ------------------------------------------------------------------------------------------------ #
 # WHILE LOOP
-# ------------------------------------------------------------------------------------------------ #
 # # List of 3 items from user input (*****)
 # userList = []
 # maxLengthList = 3
@@ -95,32 +97,16 @@ print()
 
 # ------------------------------------------------------------------------------------------------ #
 # WHILE LOOP
-# ------------------------------------------------------------------------------------------------ #
 # # Loop until something occurs, but not sure when?  Infinite while loop with break.
-# email_list = set()
+# email_list = []
 # while True:
 #     email_entry = str(input("Enter an email address [type q to 'quit']: "))
 #     if email_entry == 'q':
 #         print('Your session has ended.')
 #         break
 #     else:
-#         email_list.add(email_entry)
+#         email_list.append(email_entry)
 #         print("The email you've added is ", email_entry)
 #         print(email_list, end='\n')
 
 
-# ------------------------------------------------------------------------------------------------ #
-# WHILE LOOP
-# ------------------------------------------------------------------------------------------------ #
-# input an integer, print square if its odd, skip if its even
-# while True:
-#     value = input('Odd integer please [q to quit]: ')
-#     if value == 'q':
-#         break
-#     number = int(value)
-#     if number % 2 == 0:
-#         print(number, "isn't an odd integer")
-#         continue
-#     print(number, 'squared is', number * number)
-#     break
-# print('we broke out of the while loop')
