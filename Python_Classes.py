@@ -1,4 +1,5 @@
-print('-'*30)
+subj = 'CLASSES'
+print('-'*len(subj), '\n' + subj + '\n' + '-'*len(subj))
 # from pprint import pprint
 
 # ------------------------------------------------------------------------------------------------ #
@@ -22,34 +23,43 @@ print('-'*30)
 class Car:
     """Representation of a car."""
 
+    num_of_wheels = 4            # <--- Class variable (accessible to all instances)
+                                 # <--- Access it by Car.num_of_wheels
+
     def __init__(self, make: str, model: str, year: int):  # <--- Method
         """Initialize the following attributes to describe a car."""
         self.make = make         # <--- Attribute
         self.model = model       # <--- Attribute
         self.year = year         # <--- Attribute
-        self.odometer_value = 0  # <--- Attribute that will change over time
+        # New attributes that change over time
+        self.odometer_value = 0  # <--- notice we don't put it in __init__ parameters
 
-    def get_full_name(self):     # <--- Method
-        """Return a neatly formatted descriptive name"""
-        full_name = str(self.year) + ' ' + self.make + ' ' + self.model
+    def get_full_name(self) -> str:     # <--- Method
+        """Returns a string describing the car's year, make, model"""
+        full_name = str(self.year) + ' ' + str(self.make) + ' ' + str(self.model)
         return full_name.title()
 
     def display_odometer(self):
-        """Print the cars current mileage"""
-        return 'Current Miles = ' + str(self.odometer_value)
+        """Returns an integer describing the car's current mileage"""
+        return self.odometer_value
 
-    def increment_odometer(self, miles: int):
-        """Add new mileage to old mileage"""
+    def increment_odometer(self, miles=1):
+        """Adds new mileage to existing mileage"""
         self.odometer_value += miles
-        return 'Current Miles = ' + str(self.odometer_value)
+        return self.odometer_value
+
+    def display_color(self, color: str) -> str:
+        """Returns a string describing the car's color"""
+        return color
 
 
-shaina_car = Car('Honda', 'CR-V', 2016)  # <--- Instance of the Car class
-print(shaina_car.get_full_name())
-shaina_car.odometer_value = 99       
-print(shaina_car.display_odometer())
-print(shaina_car.increment_odometer(1))
-
+shaina_car = Car('Honda', 'CR-V', 2016)                # <--- Creating Instance of the Car class
+print('Name:', shaina_car.get_full_name())             # <--- Calling the get_full_name Method
+print('Miles:', shaina_car.display_odometer())         # <--- Calling the display_odometer Method
+shaina_car.odometer_value = 99                         # <--- Modifying an existing attribute
+print('Drove', shaina_car.increment_odometer(2), 'mile(s)')  # <--- Calling the increment_odometer Method
+print('Miles:', shaina_car.display_odometer())         # <--- Calling the display_odometer Method
+print('Color:', shaina_car.display_color('White'))
 
 
 # Modify an attributes value in 3 ways:
@@ -69,32 +79,33 @@ print(shaina_car.increment_odometer(1))
 #     self.odometer_value += miles
 
 # ------------------------------------------------------------------------------------------------ #
-# INHERITANCE
-print('\n' + '-'*2 + 'Inheritance' + '-'*2)
+subj2 = 'CLASS INHERITANCE'
+print('\n' + '-'*len(subj2), '\n' + subj2 + '\n' + '-'*len(subj2))
 
-class ElectricCar(Car):       # <--- Inheriting attributes from Car class
-    """Inherits attributes of a car, but specific to electric vehicles"""
+
+class ElectricCar(Car):       # <--- Inheriting attributes and methods from parent Car class
+    """Inherits from Car class, but specific to electric vehicles"""
 
     def __init__(self, make, model, year):
         """Initialize attributes of the parent class."""
-        super().__init__(make, model, year)  # <--- super() helps pass on attributes of parent class
+        super().__init__(make, model, year)  # <--- grabs the attributes and methods of parent Car class
         self.battery_size = 70               # <--- new attribute specific to child class ElectricCar
-        self.color = 'burnt orange'
+        self.color = 'Burnt orange'          # <--- new attribute specific to child class ElectricCar
 
     def describe_battery(self):
-        """Returns a statement describing the battery size"""
-        pretext = 'This battery has '
-        return pretext + str(self.battery_size) + '-kWh'
+        """Returns a string describing the battery size"""
+        return str(self.battery_size) + '-kWh'
 
 
-brett_car = ElectricCar('tesla', 'model s', 2018)
-print(brett_car.get_full_name())            # <--- parent method 
-brett_car.odometer_value = 200              # <--- modifying parent attribute
-print(brett_car.display_odometer())         # <--- parent method
-print('Color = ' + brett_car.color)                      # <--- new attribute, notice its global 
-print(brett_car.describe_battery())         # <--- new method
-brett_car.battery_size = 80                 # <--- new variable
-print('Battery = ' + str(brett_car.battery_size) + '-kWh')
+brett_car = ElectricCar('tesla', 'model s', 2018)  # <--- Creating Instance of the Car class
+print(brett_car.get_full_name())                   # <--- parent method
+print('Miles:', brett_car.display_odometer())      # <--- parent method
+print('Drove', brett_car.increment_odometer(2), 'mile(s)')  # parent method
+print('Miles:', brett_car.display_odometer())      # <--- parent method
+print('Color:', brett_car.color)                   # <--- parent method
+print('Battery:', brett_car.describe_battery())    # <--- new method
+brett_car.battery_size = 80                        # <--- new variable
+print('Battery:', str(brett_car.battery_size) + '-kWh')
 
 
 # WIP try override parent class method by using same method name with different attributes...
